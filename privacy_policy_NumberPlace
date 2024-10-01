@@ -17,10 +17,9 @@
 				<span class="fa fa-bars menu-icon">
 					<div class="header-right">
 						</div>
-				</span>
-			</div>
+					</span>
+				</div>
 			</header>
-		<body>
 			<div class="top-wrapper">
 				<div class="container">
 					<h1>プライバシーポリシー</h1>
@@ -44,11 +43,10 @@
 					<a href = "stamps.html">ギャラリーへ移動</a>
 					</div>
 				</div>
-			</body>
 		<footer>
 			<div class="container">
-				<small> Copyright &copy; 2023 zone All Rights Reserved </small>
+				<small> Copyright &copy; 2024 zone All Rights Reserved </small>
 				</div>
-		</footer>
+			</footer>
 		</body>
-</html>
+	</html>

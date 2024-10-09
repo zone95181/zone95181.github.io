@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<!--name = "viewport" content= "width=device-width"はスマホに対応させるために必要 -->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>NumberPlace</title>
+		<!-- cssを使うときはこの記載 <link rel="stylesheet" type="text/css" href="styles.css" /> -->
+		</head>
+	<body>
+		<header>
+			<div class="container">
+				<div class="header-left">
+          <>
+					<img class="logo" src="https://github.com/zone95181/zone95181.github.io/blob/main/logo.png?raw=true" width="140" height="100">
+					</div>
+				<span class="fa fa-bars menu-icon">
+					<div class="header-right">
+						</div>
+				</span>
+			</div>
+			</header>
+		<div class="top-wrapper">
+			<div class="container">
+				<h1>NumberPlace ～for Browser～</h1>
+				<p>こちらでは低難易度ナンプレ問題を掲載しています。</p>
+				</div>
+			<div class="middle-wrapper">
+				<div class="container">
+          <div class="Question">
+            <a>問題1</a>
+  					<img class="logo" src="https://github.com/zone95181/zone95181.github.io/blob/main/logo.png?raw=true" width="140" height="100">
+            </div>
+					</div>
+				<div class="bottom-wrapper">
+					<div class="container">
+						<a href = "index.html">ホームに戻る</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		<footer>
+			<div class="container">
+				<small> Copyright &copy; 2024 zone All Rights Reserved </small>
+				</div>
+			</footer>
+		</body>
+	</html>

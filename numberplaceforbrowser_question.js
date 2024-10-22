@@ -2157,7 +2157,7 @@ function previous_question()
 
 function next_question()
 {
-	if (question_number < 10)
+	if (question_number < 500)
 	{
 		question_number = question_number + 1;
 	}

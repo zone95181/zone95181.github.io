@@ -1694,6 +1694,59 @@ var img9c = new Image();
 
 var img_t = "";
 
+question_number = parseInt(localStorage.getItem("question_number"));
+if (question_number <= 0 || question_number > 500)
+{
+	question_number = 1;
+}
+if (question_number <= 200)
+{
+	symbol = "p";
+}
+else if (question_number <= 300)
+{
+	symbol = "q";
+}
+else if (question_number <= 400)
+{
+	symbol = "s";
+}
+else if (question_number <= 500)
+{
+	symbol = "u";
+}
+document.getElementById("table_test00_01_image").src = symbol + "1.png? raw=true";
+document.getElementById("table_test00_02_image").src = symbol + "2.png? raw=true";
+document.getElementById("table_test00_03_image").src = symbol + "3.png? raw=true";
+document.getElementById("table_test00_04_image").src = symbol + "4.png? raw=true";
+document.getElementById("table_test00_05_image").src = symbol + "5.png? raw=true";
+document.getElementById("table_test00_06_image").src = symbol + "6.png? raw=true";
+document.getElementById("table_test00_07_image").src = symbol + "7.png? raw=true";
+document.getElementById("table_test00_08_image").src = symbol + "8.png? raw=true";
+document.getElementById("table_test00_09_image").src = symbol + "9.png? raw=true";
+
+img0.src = "0.png? raw=true";
+img1d.src = symbol + "1.png? raw=true";
+img2d.src = symbol + "2.png? raw=true";
+img3d.src = symbol + "3.png? raw=true";
+img4d.src = symbol + "4.png? raw=true";
+img5d.src = symbol + "5.png? raw=true";
+img6d.src = symbol + "6.png? raw=true";
+img7d.src = symbol + "7.png? raw=true";
+img8d.src = symbol + "8.png? raw=true";
+img9d.src = symbol + "9.png? raw=true";
+img1c.src = symbol + "1c.png? raw=true";
+img2c.src = symbol + "2c.png? raw=true";
+img3c.src = symbol + "3c.png? raw=true";
+img4c.src = symbol + "4c.png? raw=true";
+img5c.src = symbol + "5c.png? raw=true";
+img6c.src = symbol + "6c.png? raw=true";
+img7c.src = symbol + "7c.png? raw=true";
+img8c.src = symbol + "8c.png? raw=true";
+img9c.src = symbol + "9c.png? raw=true";
+
+
+
 
 
 function table_number_select()
@@ -2150,7 +2203,7 @@ function previous_question()
 	}
 	else
 	{
-		question_number = 10;
+		question_number = 500;
 	}
 	localStorage.setItem("question_number", question_number);	window.location.reload();
 }
@@ -2177,7 +2230,7 @@ function hint()
 	}
 	else
 	{
-		table_array[parseInt(input_address.substr(10, 2)) - 1][parseInt(input_address.substr(13, 2)) - 1] = answer_data[question_number].split("/")[(parseInt(input_address.substr(10, 2) - 1) * 9) + parseInt(input_address.substr(13, 2)) - 1];
+		table_array[parseInt(input_address.substr(10, 2)) - 1][parseInt(input_address.substr(13, 2)) - 1] = answer_data[question_number - 1].split("/")[(parseInt(input_address.substr(10, 2) - 1) * 9) + parseInt(input_address.substr(13, 2)) - 1];
 		table_apply();
 	for (let x = 1; x <= 9; x ++)
 	{
@@ -2220,7 +2273,7 @@ function check()
 			{
 				check_judgement = 2;
 			}
-			else if (table_array[(x - 1)][(y - 1)] != answer_data[question_number].split("/")[((x - 1) * 9) + (y - 1)])
+			else if (table_array[(x - 1)][(y - 1)] != answer_data[question_number - 1].split("/")[((x - 1) * 9) + (y - 1)])
 			{
 				if (check_judgement < 2)
 				{
@@ -2249,52 +2302,12 @@ function check()
 
 function onLoad()
 {
-	question_number = parseInt(localStorage.getItem("question_number"));
-	if (question_number <= 200)
-	{
-		symbol = "p";
-	}
-	else if (question_number <= 300)
-	{
-		symbol = "q";
-	}
-	else if (question_number <= 400)
-	{
-		symbol = "s";
-	}
-	else if (question_number <= 500)
-	{
-		symbol = "u";
-	}
 	timer_start = window.setInterval(timer, 1000);
 	time = 0;
-	time_best = parseInt(answer_data[question_number].split("/")[answer_data[question_number].split("/").length - 1]);
-	document.getElementById("table_test00_0D_image").src = "question_" + question_number.toString().padStart(3, "0").substr(0, 1) + ".png? raw=true";
+	time_best = parseInt(answer_data[question_number - 1].split("/")[answer_data[question_number - 1].split("/").length - 1]);	document.getElementById("table_test00_0D_image").src = "question_" + question_number.toString().padStart(3, "0").substr(0, 1) + ".png? raw=true";
 	document.getElementById("table_test00_0E_image").src = "question_" + question_number.toString().padStart(3, "0").substr(1, 1) + ".png? raw=true";
 	document.getElementById("table_test00_0F_image").src = "question_" + question_number.toString().padStart(3, "0").substr(2, 1) + ".png? raw=true";
-	question_array = question_data[question_number].split("/");
-
-	document.getElementById("table_test00_01_image").src = symbol + "1.png? raw=true";	document.getElementById("table_test00_02_image").src = symbol + "2.png? raw=true";	document.getElementById("table_test00_03_image").src = symbol + "3.png? raw=true";	document.getElementById("table_test00_04_image").src = symbol + "4.png? raw=true";	document.getElementById("table_test00_05_image").src = symbol + "5.png? raw=true";	document.getElementById("table_test00_06_image").src = symbol + "6.png? raw=true";	document.getElementById("table_test00_07_image").src = symbol + "7.png? raw=true";	document.getElementById("table_test00_08_image").src = symbol + "8.png? raw=true";	document.getElementById("table_test00_09_image").src = symbol + "9.png? raw=true";
-
-	img0.src = "0.png? raw=true";
-	img1d.src = symbol + "1.png? raw=true";
-	img2d.src = symbol + "2.png? raw=true";
-	img3d.src = symbol + "3.png? raw=true";
-	img4d.src = symbol + "4.png? raw=true";
-	img5d.src = symbol + "5.png? raw=true";
-	img6d.src = symbol + "6.png? raw=true";
-	img7d.src = symbol + "7.png? raw=true";
-	img8d.src = symbol + "8.png? raw=true";
-	img9d.src = symbol + "9.png? raw=true";
-	img1c.src = symbol + "1c.png? raw=true";
-	img2c.src = symbol + "2c.png? raw=true";
-	img3c.src = symbol + "3c.png? raw=true";
-	img4c.src = symbol + "4c.png? raw=true";
-	img5c.src = symbol + "5c.png? raw=true";
-	img6c.src = symbol + "6c.png? raw=true";
-	img7c.src = symbol + "7c.png? raw=true";
-	img8c.src = symbol + "8c.png? raw=true";
-	img9c.src = symbol + "9c.png? raw=true";
+	question_array = question_data[question_number - 1].split("/");
 	for (let x = 1; x <= 9; x ++)
 	{
 		for (let y = 1; y <= 9; y ++)
@@ -2307,7 +2320,6 @@ function onLoad()
 	{
 		for (let y = 1; y <= 9; y ++)
 		{
-			image(x, y);
 			if (table_array[(x - 1)][(y - 1)] == "abcdefghi")
 			{
 				image_array[(x - 1)][(y - 1)].addEventListener("click", table_number_select);
@@ -2316,19 +2328,20 @@ function onLoad()
 			{
 				image_array[(x - 1)][(y - 1)].style.backgroundColor = "rgba(0, 255, 255, 0.1)";
 			}
+			image(x, y);
 		}
 	}
 }
 
 function load()
 {
-	if (save_data[question_number].split("/")[81] == "-1")
+	if (save_data[question_number - 1].split("/")[81] == "-1")
 	{
 		document.getElementById("table_test00_0S_image").src = "attention_check4.png? raw=true";
 	}
 	else
 	{
-		save_array = save_data[question_number].split("/");
+		save_array = save_data[question_number - 1].split("/");
 		for (let x = 1; x <= 9; x ++)
 		{
 			for (let y = 1; y <= 9; y ++)
@@ -2347,7 +2360,7 @@ function load()
 				}
 			}
 		}
-		time = parseInt(save_data[question_number].split("/")[answer_data[question_number].split("/").length - 1]) - 1;
+		time = parseInt(save_data[question_number - 1].split("/")[answer_data[question_number - 1].split("/").length - 1]) - 1;
 		timer();
 		document.getElementById("table_test00_0S_image").src = "attention_check6.png? raw=true";
 		for (let x = 1; x <= 9; x ++)
@@ -2368,15 +2381,15 @@ function load()
 
 function save()
 {
-	save_data[question_number] = "";
+	save_data[question_number - 1] = "";
 	for (let x = 1; x <= 9; x ++)
 	{
 		for (let y = 1; y <= 9; y ++)
 		{
-			save_data[question_number] = save_data[question_number] + table_array[(x - 1)][(y - 1)] + "/";
+			save_data[question_number - 1] = save_data[question_number - 1] + table_array[(x - 1)][(y - 1)] + "/";
 		}
 	}
-	save_data[question_number] = save_data[question_number] + time.toString();
+	save_data[question_number - 1] = save_data[question_number - 1] + time.toString();
 	document.getElementById("table_test00_0S_image").src = "attention_check5.png? raw=true";
 }
 
@@ -2394,6 +2407,7 @@ function timer()
 
 function image(x, y)
 {
+
 	c = image_array[(x - 1)][(y - 1)].getContext("2d");
 	c.clearRect(0, 0, 300, 150);
 	for (let z = 1; z <= table_array[(x - 1)][(y - 1)].length; z ++)
@@ -2467,15 +2481,9 @@ function image(x, y)
 	}
 }
 
-
-function clickFunction()
-{
-	alert("clickFunction");
-}
-
 window.onload = onLoad;
 
-
+document.getElementById("table_test00_0S_image").addEventListener("click", table_apply);
 
 table_test00_01_image.addEventListener("click", table_number_input);
 table_test00_02_image.addEventListener("click", table_number_input);

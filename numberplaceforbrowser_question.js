@@ -2254,11 +2254,15 @@ function onLoad()
 	{
 		symbol = "p";
 	}
-	else if (question_number <= 400)
+	else if (question_number <= 300)
 	{
 		symbol = "q";
 	}
 	else if (question_number <= 400)
+	{
+		symbol = "s";
+	}
+	else if (question_number <= 500)
 	{
 		symbol = "u";
 	}
@@ -2336,12 +2340,6 @@ function load()
 		{
 			for (let y = 1; y <= 9; y ++)
 			{
-/*
-				if (table_array[(x - 1)][(y - 1)].length == 9)
-				{
-					
-				}
-*/
 				image(x, y);
 				if (table_array[(x - 1)][(y - 1)] != "abcdefghi")
 				{

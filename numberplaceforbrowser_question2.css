@@ -1,0 +1,400 @@
+/*numberplaceforbrowser_Question2*/
+
+body {
+	background-color: #FFFFFF;
+	}
+
+.logo {
+	width: 15%;
+	min-width: 50px;
+	max-width: 150px;
+	cursor:pointer;
+	}
+
+header {
+}
+
+#test_Image {
+	height: 50px;
+	width: 50px;
+	border: 2px black;
+	border: 2px solid black;
+}
+
+#canvas {
+	height: 50px;
+	width: 50px;
+	border: 2px black;
+	border: 2px solid black;
+}
+
+.table_test10,.table_test50,.table_test90,.table_test130 {
+	display: flex;
+	margin-right: auto;
+	margin-left: auto;
+	border-collapse: collapse;
+	border-spacing: 0px;
+	border-top: 2px solid black;
+	border-right: 2px solid black;
+	border-left: 2px solid black;
+	width: 70%;
+	min-width: 400px;
+	max-width: 700px;
+}
+
+.table_test20,.table_test30,.table_test60,.table_test70,.table_test100,.table_test110,.table_test140,.table_test150 {
+	display: flex;
+	margin-right: auto;
+	margin-left: auto;
+	border-collapse: collapse;
+	border-spacing: 0px;
+	border-right: 2px solid black;
+	border-left: 2px solid black;
+	width: 70%;
+	min-width: 400px;
+	max-width: 700px;
+}
+
+.table_test40,.table_test80,.table_test120,.table_test160 {
+	display: flex;
+	margin-right: auto;
+	margin-left: auto;
+	border-collapse: collapse;
+	border-spacing: 0px;
+	border-bottom: 2px solid black;
+	border-right: 2px solid black;
+	border-left: 2px solid black;
+	width: 70%;
+	min-width: 400px;
+	max-width: 700px;
+}
+
+.table_test00 {
+	display: flex;
+	margin-right: auto;
+	margin-left: auto;
+	padding: 10px;
+	border-collapse: collapse;
+	border-spacing: 0px;
+	width: 70%;
+	min-width: 400px;
+	max-width: 700px;
+}
+
+.table_test01 {
+	display: flex;
+	margin-right: auto;
+	margin-left: auto;
+	padding-top: 10px;
+	border-collapse: collapse;
+	border-spacing: 0px;
+	width: 70%;
+	min-width: 400px;
+	max-width: 700px;
+}
+
+.table_test02 {
+	display: flex;
+	margin-right: auto;
+	margin-left: auto;
+	border-collapse: collapse;
+	border-spacing: 0px;
+	width: 70%;
+	min-width: 400px;
+	max-width: 700px;
+}
+
+.table_test03 {
+	display: flex;
+	margin-right: auto;
+	margin-left: auto;
+	border-collapse: collapse;
+	border-spacing: 0px;
+	width: 70%;
+	min-width: 400px;
+	max-width: 700px;
+}
+
+.table_test04 {
+	display: flex;
+	margin-right: auto;
+	margin-left: auto;
+	padding-bottom: 10px;
+	border-collapse: collapse;
+	border-spacing: 0px;
+	width: 70%;
+	min-width: 400px;
+	max-width: 700px;
+}
+
+
+
+#table_test00_01,#table_test00_02,#table_test00_03,#table_test00_04,#table_test00_05,#table_test00_06,#table_test00_07,#table_test00_08,#table_test00_09,#table_test00_10,#table_test00_11,#table_test00_12,#table_test00_13,#table_test00_14,#table_test00_15,#table_test00_16,#table_test00_0A,#table_test00_0B,#table_test00_0C,#table_test00_0D,#table_test00_0E,#table_test00_0F,#table_test00_0G,#table_test00_0H,#table_test00_0I,#table_test00_0J,#table_test00_0K,#table_test00_0L,#table_test00_0M,#table_test00_0N,#table_test00_0O,#table_test00_0P,#table_test00_0Q,#table_test00_0R,#table_test00_0S {
+	display: flex;
+	margin-right: auto;
+	margin-left: auto;
+	padding: 0px;
+	border-collapse: collapse;
+	border-spacing: 0px;
+	height: 100%;
+	width: 100%;
+	max-height: 1000px;
+	max-width: 1000px;
+	border-top: 1px solid black;
+	border-bottom: 1px solid black;
+	border-right: 1px solid black;
+	border-left: 1px solid black;
+}
+
+#table_test01_01,#table_test02_01,#table_test03_01,#table_test04_01,#table_test05_01,#table_test06_01,#table_test07_01,#table_test08_01,#table_test09_01,#table_test10_01,#table_test11_01,#table_test12_01,#table_test13_01,#table_test14_01,#table_test15_01,#table_test16_01 {
+	display: flex;
+	padding: 0px;
+	border-collapse: collapse;
+	border-spacing: 0px;
+	width: 30%;
+	max-width: 500px;
+	border-top: 1px solid black;
+	border-bottom: 1px solid black;
+	border-right: 1px solid black;
+	border-left: 1px solid black;
+}
+#table_test01_02,#table_test02_02,#table_test03_02,#table_test04_02,#table_test05_02,#table_test06_02,#table_test07_02,#table_test08_02,#table_test09_02,#table_test10_02,#table_test11_02,#table_test12_02,#table_test13_02,#table_test14_02,#table_test15_02,#table_test16_02 {
+	display: flex;
+	padding: 0px;
+	border-collapse: collapse;
+	border-spacing: 0px;
+	width: 30%;
+	max-width: 500px;
+	border-top: 1px solid black;
+	border-bottom: 1px solid black;
+	border-right: 1px solid black;
+	border-left: 1px solid black;
+}
+#table_test01_03,#table_test02_03,#table_test03_03,#table_test04_03,#table_test05_03,#table_test06_03,#table_test07_03,#table_test08_03,#table_test09_03,#table_test10_03,#table_test11_03,#table_test12_03,#table_test13_03,#table_test14_03,#table_test15_03,#table_test16_03 {
+	display: flex;
+	padding: 0px;
+	border-collapse: collapse;
+	border-spacing: 0px;
+	width: 30%;
+	max-width: 500px;
+	border-top: 1px solid black;
+	border-bottom: 1px solid black;
+	border-right: 1px solid black;
+	border-left: 1px solid black;
+}
+#table_test01_04,#table_test02_04,#table_test03_04,#table_test04_04,#table_test05_04,#table_test06_04,#table_test07_04,#table_test08_04,#table_test09_04,#table_test10_04,#table_test11_04,#table_test12_04,#table_test13_04,#table_test14_04,#table_test15_04,#table_test16_04 {
+	display: flex;
+	padding: 0px;
+	border-collapse: collapse;
+	border-spacing: 0px;
+	width: 30%;
+	max-width: 500px;
+	border-top: 1px solid black;
+	border-bottom: 1px solid black;
+	border-right: 2px solid black;
+	border-left: 1px solid black;
+}
+#table_test01_05,#table_test02_05,#table_test03_05,#table_test04_05,#table_test05_05,#table_test06_05,#table_test07_05,#table_test08_05,#table_test09_05,#table_test10_05,#table_test11_05,#table_test12_05,#table_test13_05,#table_test14_05,#table_test15_05,#table_test16_05 {
+	display: flex;
+	padding: 0px;
+	border-collapse: collapse;
+	border-spacing: 0px;
+	width: 30%;
+	max-width: 500px;
+	border-top: 1px solid black;
+	border-bottom: 1px solid black;
+	border-right: 1px solid black;
+	border-left: 2px solid black;
+}
+#table_test01_06,#table_test02_06,#table_test03_06,#table_test04_06,#table_test05_06,#table_test06_06,#table_test07_06,#table_test08_06,#table_test09_06,#table_test10_06,#table_test11_06,#table_test12_06,#table_test13_06,#table_test14_06,#table_test15_06,#table_test16_06 {
+	display: flex;
+	padding: 0px;
+	border-collapse: collapse;
+	border-spacing: 0px;
+	width: 30%;
+	max-width: 500px;
+	border-top: 1px solid black;
+	border-bottom: 1px solid black;
+	border-right: 1px solid black;
+	border-left: 1px solid black;
+}
+#table_test01_07,#table_test02_07,#table_test03_07,#table_test04_07,#table_test05_07,#table_test06_07,#table_test07_07,#table_test08_07,#table_test09_07,#table_test10_07,#table_test11_07,#table_test12_07,#table_test13_07,#table_test14_07,#table_test15_07,#table_test16_07 {
+	display: flex;
+	padding: 0px;
+	border-collapse: collapse;
+	border-spacing: 0px;
+	width: 30%;
+	max-width: 500px;
+	border-top: 1px solid black;
+	border-bottom: 1px solid black;
+	border-right: 1px solid black;
+	border-left: 1px solid black;
+}
+#table_test01_08,#table_test02_08,#table_test03_08,#table_test04_08,#table_test05_08,#table_test06_08,#table_test07_08,#table_test08_08,#table_test09_08,#table_test10_08,#table_test11_08,#table_test12_08,#table_test13_08,#table_test14_08,#table_test15_08,#table_test16_08 {
+	display: flex;
+	padding: 0px;
+	border-collapse: collapse;
+	border-spacing: 0px;
+	width: 30%;
+	max-width: 500px;
+	border-top: 1px solid black;
+	border-bottom: 1px solid black;
+	border-right: 2px solid black;
+	border-left: 1px solid black;
+}
+#table_test01_09,#table_test02_09,#table_test03_09,#table_test04_09,#table_test05_09,#table_test06_09,#table_test07_09,#table_test08_09,#table_test09_09,#table_test10_09,#table_test11_09,#table_test12_09,#table_test13_09,#table_test14_09,#table_test15_09,#table_test16_09 {
+	display: flex;
+	padding: 0px;
+	border-collapse: collapse;
+	border-spacing: 0px;
+	width: 30%;
+	max-width: 500px;
+	border-top: 1px solid black;
+	border-bottom: 1px solid black;
+	border-right: 1px solid black;
+	border-left: 2px solid black;
+}
+#table_test01_10,#table_test02_10,#table_test03_10,#table_test04_10,#table_test05_10,#table_test06_10,#table_test07_10,#table_test08_10,#table_test09_10,#table_test10_10,#table_test11_10,#table_test12_10,#table_test13_10,#table_test14_10,#table_test15_10,#table_test16_10 {
+	display: flex;
+	padding: 0px;
+	border-collapse: collapse;
+	border-spacing: 0px;
+	width: 30%;
+	max-width: 500px;
+	border-top: 1px solid black;
+	border-bottom: 1px solid black;
+	border-right: 1px solid black;
+	border-left: 1px solid black;
+}
+#table_test01_11,#table_test02_11,#table_test03_11,#table_test04_11,#table_test05_11,#table_test06_11,#table_test07_11,#table_test08_11,#table_test09_11,#table_test10_11,#table_test11_11,#table_test12_11,#table_test13_11,#table_test14_11,#table_test15_11,#table_test16_11 {
+	display: flex;
+	padding: 0px;
+	border-collapse: collapse;
+	border-spacing: 0px;
+	width: 30%;
+	max-width: 500px;
+	border-top: 1px solid black;
+	border-bottom: 1px solid black;
+	border-right: 1px solid black;
+	border-left: 1px solid black;
+}
+#table_test01_12,#table_test02_12,#table_test03_12,#table_test04_12,#table_test05_12,#table_test06_12,#table_test07_12,#table_test08_12,#table_test09_12,#table_test10_12,#table_test11_12,#table_test12_12,#table_test13_12,#table_test14_12,#table_test15_12,#table_test16_12 {
+	display: flex;
+	padding: 0px;
+	border-collapse: collapse;
+	border-spacing: 0px;
+	width: 30%;
+	max-width: 500px;
+	border-top: 1px solid black;
+	border-bottom: 1px solid black;
+	border-right: 2px solid black;
+	border-left: 1px solid black;
+}
+#table_test01_13,#table_test02_13,#table_test03_13,#table_test04_13,#table_test05_13,#table_test06_13,#table_test07_13,#table_test08_13,#table_test09_13,#table_test10_13,#table_test11_13,#table_test12_13,#table_test13_13,#table_test14_13,#table_test15_13,#table_test16_13 {
+	display: flex;
+	padding: 0px;
+	border-collapse: collapse;
+	border-spacing: 0px;
+	width: 30%;
+	max-width: 500px;
+	border-top: 1px solid black;
+	border-bottom: 1px solid black;
+	border-right: 1px solid black;
+	border-left: 2px solid black;
+}
+#table_test01_14,#table_test02_14,#table_test03_14,#table_test04_14,#table_test05_14,#table_test06_14,#table_test07_14,#table_test08_14,#table_test09_14,#table_test10_14,#table_test11_14,#table_test12_14,#table_test13_14,#table_test14_14,#table_test15_14,#table_test16_14 {
+	display: flex;
+	padding: 0px;
+	border-collapse: collapse;
+	border-spacing: 0px;
+	width: 30%;
+	max-width: 500px;
+	border-top: 1px solid black;
+	border-bottom: 1px solid black;
+	border-right: 1px solid black;
+	border-left: 1px solid black;
+}
+#table_test01_15,#table_test02_15,#table_test03_15,#table_test04_15,#table_test05_15,#table_test06_15,#table_test07_15,#table_test08_15,#table_test09_15,#table_test10_15,#table_test11_15,#table_test12_15,#table_test13_15,#table_test14_15,#table_test15_15,#table_test16_15 {
+	display: flex;
+	padding: 0px;
+	border-collapse: collapse;
+	border-spacing: 0px;
+	width: 30%;
+	max-width: 500px;
+	border-top: 1px solid black;
+	border-bottom: 1px solid black;
+	border-right: 1px solid black;
+	border-left: 1px solid black;
+}
+#table_test01_16,#table_test02_16,#table_test03_16,#table_test04_16,#table_test05_16,#table_test06_16,#table_test07_16,#table_test08_16,#table_test09_16,#table_test10_16,#table_test11_16,#table_test12_16,#table_test13_16,#table_test14_16,#table_test15_16,#table_test16_16 {
+	display: flex;
+	padding: 0px;
+	border-collapse: collapse;
+	border-spacing: 0px;
+	width: 30%;
+	max-width: 500px;
+	border-top: 1px solid black;
+	border-bottom: 1px solid black;
+	border-right: 1px solid black;
+	border-left: 1px solid black;
+}
+
+#table_test00_01_Image,#table_test00_02_Image,#table_test00_03_Image,#table_test00_04_Image,#table_test00_05_Image,#table_test00_06_Image,#table_test00_07_Image,#table_test00_08_Image,#table_test00_09_Image,#table_test00_10_Image,#table_test00_11_Image,#table_test00_12_Image,#table_test00_13_Image,#table_test00_14_Image,#table_test00_15_Image,#table_test00_16_Image,#table_test00_0A_Image,#table_test00_0B_Image {
+	width: 100%;
+	aspect-ratio: 1/1;
+	max-width: 1000px;
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+#table_test00_0C_Image,#table_test00_0D_Image,#table_test00_0E_Image,#table_test00_0F_Image,#table_test00_0G_Image,#table_test00_0H_Image,#table_test00_0I_Image,#table_test00_0J_Image,#table_test00_0K_Image,#table_test00_0L_Image {
+	width: 100%;
+	aspect-ratio: 1/2;
+	max-width: 1000px;
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+#table_test00_0M_Image,#table_test00_0N_Image,#table_test00_0O_Image,#table_test00_0P_Image {
+	width: 100%;
+	aspect-ratio: 2/1;
+	max-width: 1000px;
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+#table_test00_0Q_Image,#table_test00_0R_Image {
+	width: 100%;
+	aspect-ratio: 4/1;
+	max-width: 1000px;
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+#table_test00_0S_Image {
+	width: 100%;
+	aspect-ratio: 8/1;
+	max-width: 1000px;
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+#table_test01_01_Image,#table_test01_02_Image,#table_test01_03_Image,#table_test01_04_Image,#table_test01_05_Image,#table_test01_06_Image,#table_test01_07_Image,#table_test01_08_Image,#table_test01_09_Image,#table_test01_10_Image,#table_test01_11_Image,#table_test01_12_Image,#table_test01_13_Image,#table_test01_14_Image,#table_test01_15_Image,#table_test01_16_Image,#table_test02_01_Image,#table_test02_02_Image,#table_test02_03_Image,#table_test02_04_Image,#table_test02_05_Image,#table_test02_06_Image,#table_test02_07_Image,#table_test02_08_Image,#table_test02_09_Image,#table_test02_10_Image,#table_test02_11_Image,#table_test02_12_Image,#table_test02_13_Image,#table_test02_14_Image,#table_test02_15_Image,#table_test02_16_Image,#table_test03_01_Image,#table_test03_02_Image,#table_test03_03_Image,#table_test03_04_Image,#table_test03_05_Image,#table_test03_06_Image,#table_test03_07_Image,#table_test03_08_Image,#table_test03_09_Image,#table_test03_10_Image,#table_test03_11_Image,#table_test03_12_Image,#table_test03_13_Image,#table_test03_14_Image,#table_test03_15_Image,#table_test03_16_Image,#table_test04_01_Image,#table_test04_02_Image,#table_test04_03_Image,#table_test04_04_Image,#table_test04_05_Image,#table_test04_06_Image,#table_test04_07_Image,#table_test04_08_Image,#table_test04_09_Image,#table_test04_10_Image,#table_test04_11_Image,#table_test04_12_Image,#table_test04_13_Image,#table_test04_14_Image,#table_test04_15_Image,#table_test04_16_Image,#table_test05_01_Image,#table_test05_02_Image,#table_test05_03_Image,#table_test05_04_Image,#table_test05_05_Image,#table_test05_06_Image,#table_test05_07_Image,#table_test05_08_Image,#table_test05_09_Image,#table_test05_10_Image,#table_test05_11_Image,#table_test05_12_Image,#table_test05_13_Image,#table_test05_14_Image,#table_test05_15_Image,#table_test05_16_Image,#table_test06_01_Image,#table_test06_02_Image,#table_test06_03_Image,#table_test06_04_Image,#table_test06_05_Image,#table_test06_06_Image,#table_test06_07_Image,#table_test06_08_Image,#table_test06_09_Image,#table_test06_10_Image,#table_test06_11_Image,#table_test06_12_Image,#table_test06_13_Image,#table_test06_14_Image,#table_test06_15_Image,#table_test06_16_Image,#table_test07_01_Image,#table_test07_02_Image,#table_test07_03_Image,#table_test07_04_Image,#table_test07_05_Image,#table_test07_06_Image,#table_test07_07_Image,#table_test07_08_Image,#table_test07_09_Image,#table_test07_10_Image,#table_test07_11_Image,#table_test07_12_Image,#table_test07_13_Image,#table_test07_14_Image,#table_test07_15_Image,#table_test07_16_Image,#table_test08_01_Image,#table_test08_02_Image,#table_test08_03_Image,#table_test08_04_Image,#table_test08_05_Image,#table_test08_06_Image,#table_test08_07_Image,#table_test08_08_Image,#table_test08_09_Image,#table_test08_10_Image,#table_test08_11_Image,#table_test08_12_Image,#table_test08_13_Image,#table_test08_14_Image,#table_test08_15_Image,#table_test08_16_Image,#table_test09_01_Image,#table_test09_02_Image,#table_test09_03_Image,#table_test09_04_Image,#table_test09_05_Image,#table_test09_06_Image,#table_test09_07_Image,#table_test09_08_Image,#table_test09_09_Image,#table_test09_10_Image,#table_test09_11_Image,#table_test09_12_Image,#table_test09_13_Image,#table_test09_14_Image,#table_test09_15_Image,#table_test09_16_Image,#table_test10_01_Image,#table_test10_02_Image,#table_test10_03_Image,#table_test10_04_Image,#table_test10_05_Image,#table_test10_06_Image,#table_test10_07_Image,#table_test10_08_Image,#table_test10_09_Image,#table_test10_10_Image,#table_test10_11_Image,#table_test10_12_Image,#table_test10_13_Image,#table_test10_14_Image,#table_test10_15_Image,#table_test10_16_Image,#table_test11_01_Image,#table_test11_02_Image,#table_test11_03_Image,#table_test11_04_Image,#table_test11_05_Image,#table_test11_06_Image,#table_test11_07_Image,#table_test11_08_Image,#table_test11_09_Image,#table_test11_10_Image,#table_test11_11_Image,#table_test11_12_Image,#table_test11_13_Image,#table_test11_14_Image,#table_test11_15_Image,#table_test11_16_Image,#table_test12_01_Image,#table_test12_02_Image,#table_test12_03_Image,#table_test12_04_Image,#table_test12_05_Image,#table_test12_06_Image,#table_test12_07_Image,#table_test12_08_Image,#table_test12_09_Image,#table_test12_10_Image,#table_test12_11_Image,#table_test12_12_Image,#table_test12_13_Image,#table_test12_14_Image,#table_test12_15_Image,#table_test12_16_Image,#table_test13_01_Image,#table_test13_02_Image,#table_test13_03_Image,#table_test13_04_Image,#table_test13_05_Image,#table_test13_06_Image,#table_test13_07_Image,#table_test13_08_Image,#table_test13_09_Image,#table_test13_10_Image,#table_test13_11_Image,#table_test13_12_Image,#table_test13_13_Image,#table_test13_14_Image,#table_test13_15_Image,#table_test13_16_Image,#table_test14_01_Image,#table_test14_02_Image,#table_test14_03_Image,#table_test14_04_Image,#table_test14_05_Image,#table_test14_06_Image,#table_test14_07_Image,#table_test14_08_Image,#table_test14_09_Image,#table_test14_10_Image,#table_test14_11_Image,#table_test14_12_Image,#table_test14_13_Image,#table_test14_14_Image,#table_test14_15_Image,#table_test14_16_Image,#table_test15_01_Image,#table_test15_02_Image,#table_test15_03_Image,#table_test15_04_Image,#table_test15_05_Image,#table_test15_06_Image,#table_test15_07_Image,#table_test15_08_Image,#table_test15_09_Image,#table_test15_10_Image,#table_test15_11_Image,#table_test15_12_Image,#table_test15_13_Image,#table_test15_14_Image,#table_test15_15_Image,#table_test15_16_Image,#table_test16_01_Image,#table_test16_02_Image,#table_test16_03_Image,#table_test16_04_Image,#table_test16_05_Image,#table_test16_06_Image,#table_test16_07_Image,#table_test16_08_Image,#table_test16_09_Image,#table_test16_10_Image,#table_test16_11_Image,#table_test16_12_Image,#table_test16_13_Image,#table_test16_14_Image,#table_test16_15_Image,#table_test16_16_Image {
+	width: 100%;
+	aspect-ratio: 1/1;
+
+	max-width: 700px;
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+footer {
+	bottom: 0;
+	left: 0;
+	right: 0;
+	width: 100%;
+}
+
+
+
+

@@ -13,7 +13,7 @@ const image_array =
 	[document.getElementById("table_test09_01_image"), document.getElementById("table_test09_02_image"), document.getElementById("table_test09_03_image"), document.getElementById("table_test09_04_image"), document.getElementById("table_test09_05_image"), document.getElementById("table_test09_06_image"), document.getElementById("table_test09_07_image"), document.getElementById("table_test09_08_image"), document.getElementById("table_test09_09_image")]
 ];
 
-var number_array = 
+const number_array = 
 [
 	[document.getElementById("table_test01_01"), document.getElementById("table_test01_02"), document.getElementById("table_test01_03"), document.getElementById("table_test01_04"), document.getElementById("table_test01_05"), document.getElementById("table_test01_06"), document.getElementById("table_test01_07"), document.getElementById("table_test01_08"), document.getElementById("table_test01_09")],
 	[document.getElementById("table_test02_01"), document.getElementById("table_test02_02"), document.getElementById("table_test02_03"), document.getElementById("table_test02_04"), document.getElementById("table_test02_05"), document.getElementById("table_test02_06"), document.getElementById("table_test02_07"), document.getElementById("table_test02_08"), document.getElementById("table_test02_09")],
@@ -25,7 +25,7 @@ var number_array =
 	[document.getElementById("table_test08_01"), document.getElementById("table_test08_02"), document.getElementById("table_test08_03"), document.getElementById("table_test08_04"), document.getElementById("table_test08_05"), document.getElementById("table_test08_06"), document.getElementById("table_test08_07"), document.getElementById("table_test08_08"), document.getElementById("table_test08_09")],
 	[document.getElementById("table_test09_01"), document.getElementById("table_test09_02"), document.getElementById("table_test09_03"), document.getElementById("table_test09_04"), document.getElementById("table_test09_05"), document.getElementById("table_test09_06"), document.getElementById("table_test09_07"), document.getElementById("table_test09_08"), document.getElementById("table_test09_09")]
 ];
-var question_data = 
+const question_data = 
 [
 "G/H/E/abcdefghi/A/abcdefghi/D/B/abcdefghi/A/abcdefghi/abcdefghi/D/E/C/abcdefghi/abcdefghi/F/abcdefghi/abcdefghi/D/B/abcdefghi/abcdefghi/abcdefghi/A/E/abcdefghi/abcdefghi/B/C/abcdefghi/G/abcdefghi/E/abcdefghi/abcdefghi/G/abcdefghi/abcdefghi/abcdefghi/abcdefghi/C/D/H/I/D/C/abcdefghi/F/abcdefghi/A/abcdefghi/abcdefghi/abcdefghi/abcdefghi/abcdefghi/E/I/abcdefghi/H/C/A/abcdefghi/abcdefghi/H/abcdefghi/abcdefghi/F/B/abcdefghi/abcdefghi/C/I/abcdefghi/G/H/B/abcdefghi/abcdefghi/abcdefghi/-1",
 "abcdefghi/abcdefghi/abcdefghi/abcdefghi/F/abcdefghi/I/C/H/abcdefghi/abcdefghi/A/G/E/abcdefghi/abcdefghi/B/abcdefghi/D/abcdefghi/F/C/abcdefghi/abcdefghi/abcdefghi/abcdefghi/E/C/B/H/I/abcdefghi/abcdefghi/A/abcdefghi/D/E/abcdefghi/abcdefghi/F/C/abcdefghi/H/abcdefghi/abcdefghi/abcdefghi/abcdefghi/abcdefghi/abcdefghi/A/D/B/E/abcdefghi/G/I/abcdefghi/abcdefghi/abcdefghi/F/abcdefghi/D/A/abcdefghi/F/abcdefghi/B/D/G/E/H/abcdefghi/abcdefghi/D/E/abcdefghi/I/abcdefghi/abcdefghi/G/abcdefghi/-1",
@@ -529,7 +529,7 @@ var question_data =
 "G/abcdefghi/abcdefghi/abcdefghi/H/abcdefghi/D/A/F/abcdefghi/C/abcdefghi/abcdefghi/I/abcdefghi/H/G/abcdefghi/abcdefghi/H/abcdefghi/D/abcdefghi/abcdefghi/B/C/I/abcdefghi/abcdefghi/A/E/abcdefghi/abcdefghi/abcdefghi/D/abcdefghi/abcdefghi/I/abcdefghi/G/C/D/abcdefghi/abcdefghi/A/B/abcdefghi/E/I/A/abcdefghi/abcdefghi/abcdefghi/G/abcdefghi/abcdefghi/G/abcdefghi/D/E/A/H/C/H/abcdefghi/C/abcdefghi/G/abcdefghi/F/abcdefghi/D/E/A/abcdefghi/abcdefghi/abcdefghi/C/abcdefghi/abcdefghi/abcdefghi/-1",
 ];
 
-var answer_data = 
+const answer_data = 
 [
 "G/H/E/F/A/I/D/B/C/A/B/I/D/E/C/G/H/F/F/C/D/B/G/H/I/A/E/H/A/B/C/D/G/F/E/I/E/G/F/I/B/A/C/D/H/I/D/C/H/F/E/A/G/B/B/F/G/E/I/D/H/C/A/D/E/H/A/C/F/B/I/G/C/I/A/G/H/B/E/F/D/-1",
 "B/E/G/D/F/A/I/C/H/I/C/A/G/E/H/D/B/F/D/H/F/C/B/I/G/A/E/C/B/H/I/G/E/A/F/D/E/A/D/F/C/B/H/I/G/F/G/I/H/A/D/B/E/C/G/I/B/E/H/F/C/D/A/A/F/C/B/D/G/E/H/I/H/D/E/A/I/C/F/G/B/-1",
@@ -2373,9 +2373,9 @@ function image_startup()
 
 function image_sub()
 {
-			c = document.getElementById("table_test00_0S_image").getContext("2d");
-			c.clearRect(0, 0, imgattention_none.width, imgattention_none.height);
-			c.drawImage(imgattention_none, 0, 0, imgattention_none.width, imgattention_none.height);
+	c = document.getElementById("table_test00_0S_image").getContext("2d");
+	c.clearRect(0, 0, imgattention_none.width, imgattention_none.height);
+	c.drawImage(imgattention_none, 0, 0, imgattention_none.width, imgattention_none.height);
 	switch (event.target.id)
 	{
 		case "table_test00_0B_image":

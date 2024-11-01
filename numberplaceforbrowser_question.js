@@ -1,6 +1,6 @@
-/numberplaceforbrowser_question/
-/20241101/
-var image_array = 
+/*numberplaceforbrowser_question*/
+/*20241101*/
+const image_array = 
 [
 	[document.getElementById("table_test01_01_image"), document.getElementById("table_test01_02_image"), document.getElementById("table_test01_03_image"), document.getElementById("table_test01_04_image"), document.getElementById("table_test01_05_image"), document.getElementById("table_test01_06_image"), document.getElementById("table_test01_07_image"), document.getElementById("table_test01_08_image"), document.getElementById("table_test01_09_image")],
 	[document.getElementById("table_test02_01_image"), document.getElementById("table_test02_02_image"), document.getElementById("table_test02_03_image"), document.getElementById("table_test02_04_image"), document.getElementById("table_test02_05_image"), document.getElementById("table_test02_06_image"), document.getElementById("table_test02_07_image"), document.getElementById("table_test02_08_image"), document.getElementById("table_test02_09_image")],

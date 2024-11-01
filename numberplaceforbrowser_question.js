@@ -1,4 +1,5 @@
 /numberplaceforbrowser_question/
+/20241101/
 const logo_image = document.getElementById("logo_image");
 
 const_table_test00_01_image = document.getElementById("table_test00_01_image");

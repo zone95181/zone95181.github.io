@@ -1,0 +1,15 @@
+/*stamps*/
+/*20241102*/
+body {
+	background-color: #FFFFFF;
+	}
+
+.logo {
+	width: 15%;
+	min-width: 50px;
+	max-width: 150px;
+	cursor:pointer;
+	}
+
+header {
+}

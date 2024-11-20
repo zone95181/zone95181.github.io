@@ -1048,7 +1048,7 @@ function previous_question()
 	}
 	else
 	{
-		question_number = 100;
+		question_number = 50;
 	}
 	localStorage.setItem("question_number4", question_number);
 	window.location.reload();
@@ -1056,7 +1056,7 @@ function previous_question()
 
 function next_question()
 {
-	if (question_number < 100)
+	if (question_number < 50)
 	{
 		question_number = question_number + 1;
 	}

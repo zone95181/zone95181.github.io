@@ -518,9 +518,9 @@ if (localStorage.getItem("save_data") != null)
 {
 	save_data = localStorage.getItem("save_data");
 }
-if (localStorage.getItem("question_number3") != null)
+if (localStorage.getItem("question_number3hard") != null)
 {
-	question_number = parseInt(localStorage.getItem("question_number3"));
+	question_number = parseInt(localStorage.getItem("question_number3hard"));
 }
 if (question_number <= 0 || question_number > 200)
 {
@@ -1041,7 +1041,7 @@ function previous_question()
 	{
 		question_number = 200;
 	}
-	localStorage.setItem("question_number3", question_number);
+	localStorage.setItem("question_number3hard", question_number);
 	window.location.reload();
 }
 
@@ -1055,7 +1055,7 @@ function next_question()
 	{
 		question_number = 1;
 	}
-	localStorage.setItem("question_number3", question_number);
+	localStorage.setItem("question_number3hard", question_number);
 	window.location.reload();
 }
 

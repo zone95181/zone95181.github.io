@@ -1,5 +1,5 @@
 /*stamps*/
-/*20241102*/
+/*20241125*/
 body {
 	background-color: #FFFFFF;
 	}
@@ -12,4 +12,59 @@ body {
 	}
 
 header {
+}
+
+.stamp_canvas_frame {
+	width: 300px;
+	height: 300px;
+	border: 10px double rgba(0, 0, 0, 50%);
+}
+
+.stamp_canvas_tab {
+	width: 300px;
+	height: 60px;
+	border: 10px double rgba(0, 0, 0, 50%);
+}
+
+.stamp_part_main {
+	width: 100px;
+	height: 100px;
+	border: 5px solid rgba(255, 0, 0, 50%);
+}
+
+.stamp_part_text {
+	width: 100px;
+	height: 100px;
+	border: 5px solid rgba(0, 255, 0, 50%);
+}
+
+.stamp_part_background {
+	width: 100px;
+	height: 100px;
+	border: 5px solid rgba(0, 0, 255, 50%);
+}
+
+.stamp_part_main > canvas {
+	width: 100px;
+	height: 100px;
+}
+
+.stamp_part_text > canvas {
+	width: 100px;
+	height: 100px;
+}
+
+.stamp_part_background > canvas {
+	width: 100px;
+	height: 100px;
+}
+
+.stamp_canvas_frame > canvas {
+	width: 300px;
+	height: 300px;
+}
+
+.stamp_canvas_tab > canvas {
+	width: 300px;
+	height: 300px;
 }

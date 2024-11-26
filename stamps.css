@@ -15,22 +15,6 @@ body {
 header {
 }
 
-a {
-	user-select: none;
-}
-
-p {
-	user-select: none;
-}
-
-h1 {
-	user-select: none;
-}
-
-br {
-	user-select: none;
-}
-
 #stamp_canvas_frame {
 	width: 300px;
 	height: 300px;
@@ -108,8 +92,7 @@ br {
 }
 
 #stamp_creation {
-	width: 300px;
-	height: 300px;
+	width: 100%;
 }
 
 

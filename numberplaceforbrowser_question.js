@@ -1150,7 +1150,7 @@ imgmemo_on.src = "memo_on.png? raw=true";
 imgload.src = "load.png? raw=true";
 imgsave.src = "save.png? raw=true";
 imgtime.src = "time.png? raw=true";
-imgquestion.src = "time.png? raw=true";
+imgquestion.src = "question.png? raw=true";
 imgquestion_0.src = "question_0.png? raw=true";
 imgquestion_1.src = "question_1.png? raw=true";
 imgquestion_2.src = "question_2.png? raw=true";

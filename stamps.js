@@ -26,9 +26,9 @@ var imgbrank = new Image();
 var target_image = new Image();
 
 var canvas_element = [
-	[imgbrank,0,0,0,0,0,0],
-	[imgbrank,0,0,0,0,0,0],
-	[imgbrank,0,0,0,0,0,0],
+	[imgbrank,0,0,0,0,0,0,1],
+	[imgbrank,0,0,0,0,0,0,1],
+	[imgbrank,0,0,0,0,0,0,1],
 ]
 
 var anchor = document.createElement("a");
@@ -264,23 +264,27 @@ function Canvas_Draw()
 
 	c.translate((document.getElementById("stamp_canvas").width / 2 + canvas_element[0][3] * document.getElementById("stamp_canvas").width / document.getElementById("stamp_canvas").getBoundingClientRect().width), (document.getElementById("stamp_canvas").height / 2 + canvas_element[0][4] * document.getElementById("stamp_canvas").height / document.getElementById("stamp_canvas").getBoundingClientRect().height));
 	c.rotate(canvas_element[0][5] * Math.PI / 180);
-	c.drawImage(canvas_element[0][0], -(document.getElementById("stamp_canvas").width / 2), -(document.getElementById("stamp_canvas").height / 2), canvas_element[0][1], canvas_element[0][2]);
+	c.drawImage(canvas_element[0][0], -(document.getElementById("stamp_canvas").width / 2) * canvas_element[0][7], -(document.getElementById("stamp_canvas").height / 2) * canvas_element[0][7], canvas_element[0][1] * canvas_element[0][7], canvas_element[0][2] * canvas_element[0][7]);
 	c.rotate(-canvas_element[0][5] * Math.PI / 180);
 	c.translate( -(document.getElementById("stamp_canvas").width / 2 + canvas_element[0][3] * document.getElementById("stamp_canvas").width / document.getElementById("stamp_canvas").getBoundingClientRect().width), -(document.getElementById("stamp_canvas").height / 2 + canvas_element[0][4] * document.getElementById("stamp_canvas").height / document.getElementById("stamp_canvas").getBoundingClientRect().height));
 
 	c.translate((document.getElementById("stamp_canvas").width / 2 + canvas_element[1][3] * document.getElementById("stamp_canvas").width / document.getElementById("stamp_canvas").getBoundingClientRect().width), (document.getElementById("stamp_canvas").height / 2 + canvas_element[1][4] * document.getElementById("stamp_canvas").height / document.getElementById("stamp_canvas").getBoundingClientRect().height));
 	c.rotate(canvas_element[1][5] * Math.PI / 180);
-	c.drawImage(canvas_element[1][0], -(document.getElementById("stamp_canvas").width / 2), -(document.getElementById("stamp_canvas").height / 2), canvas_element[1][1], canvas_element[1][2]);
+	c.drawImage(canvas_element[1][0], -(document.getElementById("stamp_canvas").width / 2) * canvas_element[1][7], -(document.getElementById("stamp_canvas").height / 2) * canvas_element[1][7], canvas_element[1][1] * canvas_element[1][7], canvas_element[1][2] * canvas_element[1][7]);
 	c.rotate(-canvas_element[1][5] * Math.PI / 180);
 	c.translate( -(document.getElementById("stamp_canvas").width / 2 + canvas_element[1][3] * document.getElementById("stamp_canvas").width / document.getElementById("stamp_canvas").getBoundingClientRect().width), -(document.getElementById("stamp_canvas").height / 2 + canvas_element[1][4] * document.getElementById("stamp_canvas").height / document.getElementById("stamp_canvas").getBoundingClientRect().height));
 
 	c.translate((document.getElementById("stamp_canvas").width / 2 + canvas_element[2][3] * document.getElementById("stamp_canvas").width / document.getElementById("stamp_canvas").getBoundingClientRect().width), (document.getElementById("stamp_canvas").height / 2 + canvas_element[2][4] * document.getElementById("stamp_canvas").height / document.getElementById("stamp_canvas").getBoundingClientRect().height));
 	c.rotate(canvas_element[2][5] * Math.PI / 180);
-	c.drawImage(canvas_element[2][0], -(document.getElementById("stamp_canvas").width / 2), -(document.getElementById("stamp_canvas").height / 2), canvas_element[2][1], canvas_element[2][2]);
+	c.drawImage(canvas_element[2][0], -(document.getElementById("stamp_canvas").width / 2) * canvas_element[2][7], -(document.getElementById("stamp_canvas").height / 2) * canvas_element[2][7], canvas_element[2][1] * canvas_element[2][7], canvas_element[2][2] * canvas_element[2][7]);
 	c.rotate(-canvas_element[2][5] * Math.PI / 180);
 	c.translate( -(document.getElementById("stamp_canvas").width / 2 + canvas_element[2][3] * document.getElementById("stamp_canvas").width / document.getElementById("stamp_canvas").getBoundingClientRect().width), -(document.getElementById("stamp_canvas").height / 2 + canvas_element[2][4] * document.getElementById("stamp_canvas").height / document.getElementById("stamp_canvas").getBoundingClientRect().height));
 
+
 	c = null;
+
+
+
 }
 
 function Canvas_Select()
@@ -389,6 +393,19 @@ function Canvas_Download()
 	anchor.click();
 }
 
+function Canvas_Adjust_Rotate_Mousedown()
+{
+	document.getElementById("stamp_adjust1").addEventListener("mousemove", Canvas_Adjust_Rotate);
+	document.addEventListener("mouseup", Canvas_Adjust_Rotate_Mouseup);
+	Canvas_Adjust_Rotate();
+}
+
+function Canvas_Adjust_Rotate_Mouseup()
+{
+	document.getElementById("stamp_adjust1").removeEventListener("mousemove", Canvas_Adjust_Rotate);
+	document.removeEventListener("mouseup", Canvas_Adjust_Rotate_Mouseup);
+}
+
 function Canvas_Adjust_Rotate()
 {
 	switch (canvas_select)
@@ -409,30 +426,37 @@ function Canvas_Adjust_Rotate()
 	Canvas_Draw();
 }
 
-function Canvas_Adjust_Scale()
-{
-	
-}
-
-function Canvas_Adjust_Rotate_Mousedown()
-{
-	document.getElementById("stamp_adjust1").addEventListener("mousemove", Canvas_Adjust_Rotate);
-	document.addEventListener("mouseup", Canvas_Adjust_Rotate_Mouseup);
-	Canvas_Adjust_Rotate();
-}
-
-function Canvas_Adjust_Rotate_Mouseup()
-{
-	document.getElementById("stamp_adjust1").removeEventListener("mousemove", Canvas_Adjust_Rotate);
-	document.removeEventListener("mouseup", Canvas_Adjust_Rotate_Mouseup);
-}
-
 function Canvas_Adjust_Scale_Mousedown()
 {
+	document.getElementById("stamp_adjust2").addEventListener("mousemove", Canvas_Adjust_Scale);
+	document.addEventListener("mouseup", Canvas_Adjust_Scale_Mouseup);
+	Canvas_Adjust_Scale();
 }
 
 function Canvas_Adjust_Scale_Mouseup()
 {
+	document.getElementById("stamp_adjust2").removeEventListener("mousemove", Canvas_Adjust_Scale);
+	document.removeEventListener("mouseup", Canvas_Adjust_Scale_Mouseup);
+}
+
+function Canvas_Adjust_Scale()
+{
+	switch (canvas_select)
+	{
+		case 1:
+			canvas_element[1][7] = (event.clientX - document.getElementById("stamp_adjust2").getBoundingClientRect().left) * 2 / document.getElementById("stamp_adjust2").getBoundingClientRect().width;
+			break;
+		case 2:
+			canvas_element[2][7] = (event.clientX - document.getElementById("stamp_adjust2").getBoundingClientRect().left) * 2 / document.getElementById("stamp_adjust2").getBoundingClientRect().width;
+			break;
+		case 3:
+			canvas_element[0][7] = (event.clientX - document.getElementById("stamp_adjust2").getBoundingClientRect().left) * 2 / document.getElementById("stamp_adjust2").getBoundingClientRect().width;
+			break;
+	}
+	Canvas_Draw();
+
+
+
 }
 
 window.onload = onLoad;
@@ -456,8 +480,7 @@ document.getElementById("stamp_tab1").addEventListener("click", Canvas_Select);
 document.getElementById("stamp_tab2").addEventListener("click", Canvas_Select);
 document.getElementById("stamp_tab3").addEventListener("click", Canvas_Select);
 document.getElementById("stamp_adjust1").addEventListener("mousedown", Canvas_Adjust_Rotate_Mousedown);	
-document.getElementById("stamp_adjust2").addEventListener("click", Canvas_Adjust_Scale_Mousedown);
-document.getElementById("stamp_adjust2").addEventListener("click", Canvas_Adjust_Scale);
+document.getElementById("stamp_adjust2").addEventListener("mousedown", Canvas_Adjust_Scale_Mousedown);
 document.getElementById("stamp_canvas").addEventListener("mousedown", Canvas_Mousedown);
 
 document.getElementById("stamp_creation").addEventListener("click", Canvas_Download);

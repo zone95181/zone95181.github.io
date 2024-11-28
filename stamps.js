@@ -268,29 +268,17 @@ function Canvas_Draw()
 	c.rotate(-canvas_element[0][5] * Math.PI / 180);
 	c.translate( -(document.getElementById("stamp_canvas").width / 2 + canvas_element[0][3] * document.getElementById("stamp_canvas").width / document.getElementById("stamp_canvas").getBoundingClientRect().width), -(document.getElementById("stamp_canvas").height / 2 + canvas_element[0][4] * document.getElementById("stamp_canvas").height / document.getElementById("stamp_canvas").getBoundingClientRect().height));
 
-
-
-
-
 	c.translate((document.getElementById("stamp_canvas").width / 2 + canvas_element[1][3] * document.getElementById("stamp_canvas").width / document.getElementById("stamp_canvas").getBoundingClientRect().width), (document.getElementById("stamp_canvas").height / 2 + canvas_element[1][4] * document.getElementById("stamp_canvas").height / document.getElementById("stamp_canvas").getBoundingClientRect().height));
 	c.rotate(canvas_element[1][5] * Math.PI / 180);
 	c.drawImage(canvas_element[1][0], -(document.getElementById("stamp_canvas").width / 2), -(document.getElementById("stamp_canvas").height / 2), canvas_element[1][1], canvas_element[1][2]);
 	c.rotate(-canvas_element[1][5] * Math.PI / 180);
 	c.translate( -(document.getElementById("stamp_canvas").width / 2 + canvas_element[1][3] * document.getElementById("stamp_canvas").width / document.getElementById("stamp_canvas").getBoundingClientRect().width), -(document.getElementById("stamp_canvas").height / 2 + canvas_element[1][4] * document.getElementById("stamp_canvas").height / document.getElementById("stamp_canvas").getBoundingClientRect().height));
 
-
-
-
-
-
-
-
 	c.translate((document.getElementById("stamp_canvas").width / 2 + canvas_element[2][3] * document.getElementById("stamp_canvas").width / document.getElementById("stamp_canvas").getBoundingClientRect().width), (document.getElementById("stamp_canvas").height / 2 + canvas_element[2][4] * document.getElementById("stamp_canvas").height / document.getElementById("stamp_canvas").getBoundingClientRect().height));
 	c.rotate(canvas_element[2][5] * Math.PI / 180);
 	c.drawImage(canvas_element[2][0], -(document.getElementById("stamp_canvas").width / 2), -(document.getElementById("stamp_canvas").height / 2), canvas_element[2][1], canvas_element[2][2]);
 	c.rotate(-canvas_element[2][5] * Math.PI / 180);
 	c.translate( -(document.getElementById("stamp_canvas").width / 2 + canvas_element[2][3] * document.getElementById("stamp_canvas").width / document.getElementById("stamp_canvas").getBoundingClientRect().width), -(document.getElementById("stamp_canvas").height / 2 + canvas_element[2][4] * document.getElementById("stamp_canvas").height / document.getElementById("stamp_canvas").getBoundingClientRect().height));
-
 
 	c = null;
 }
@@ -391,10 +379,6 @@ function Canvas_Layout(event)
 			break;
 	}
 	Canvas_Draw();
-document.getElementById("text_test").textContent = canvas_element[1][3] + " " + canvas_element[1][4];
-
-document.getElementById("text_test2").textContent = (document.getElementById("stamp_canvas").width / 2 + canvas_element[1][3] * document.getElementById("stamp_canvas").width / document.getElementById("stamp_canvas").getBoundingClientRect().width) + " " + (document.getElementById("stamp_canvas").height / 2 + canvas_element[1][4] * document.getElementById("stamp_canvas").height / document.getElementById("stamp_canvas").getBoundingClientRect().height);
-
 }
 
 function Canvas_Download()

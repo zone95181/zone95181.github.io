@@ -5,19 +5,10 @@ var c = canvas.getContext("2d");
 var imglogo = new Image();
 var imgbrank = new Image();
 var imgnowloading = new Image();
-var imgstamp_production = new Image();
-var imgtab_main = new Image();
-var imgtab_text = new Image();
-var imgtab_background = new Image();
-var imgmain_left = new Image();
-var imgmain_right = new Image();
-var imgtext_left = new Image();
-var imgtext_right = new Image();
-var imgbackground_left = new Image();
-var imgbackground_right = new Image();
 var imgmain_table = new Image();
 var imgtext_table = new Image();
 var imgbackground_table = new Image();
+var imgsystem_table = new Image();
 
 var canvas_element = [
 	[imgbrank,0,0,0,0,0,0,1],
@@ -53,21 +44,14 @@ let table_prepare = 0;
 imglogo.src = "logo.png? raw=true";
 imgbrank.src = "brank.png? raw=true";
 imgnowloading.src = "nowloading.png? raw=true";
-imgstamp_production.src = "stamp_production.png? raw=true";
-imgtab_main.src = "tab_main.png? raw=true";
-imgtab_text.src = "tab_text.png? raw=true";
-imgtab_background.src = "tab_background.png? raw=true";
-imgmain_left.src = "main_left.png? raw=true";
-imgmain_right.src = "main_right.png? raw=true";
-imgtext_left.src = "text_left.png? raw=true";
-imgtext_right.src = "text_right.png? raw=true";
-imgbackground_left.src = "background_left.png? raw=true";
-imgbackground_right.src = "background_right.png? raw=true";
 
 imgnowloading.onload = () => {
 	test();
 }
 
+imgsystem_table.onload = () => {
+	arrange_system();
+}
 imgmain_table.onload = () => {
 	arrange_main();
 }
@@ -80,6 +64,10 @@ imgbackground_table.onload = () => {
 
 function test()
 {
+	c = document.getElementById("logo_image").getContext("2d");
+	c.clearRect(0, 0, imglogo.width, imglogo.height);
+	c.drawImage(imglogo, 0, 0, imglogo.width, imglogo.height);
+
 	c = document.getElementById("stamp_canvas").getContext("2d");
 	c.clearRect(0, 0, imgnowloading.width, imgnowloading.height);
 	c.drawImage(imgnowloading, 0, 0, imgnowloading.width, imgnowloading.height);
@@ -93,59 +81,14 @@ document.getElementById("text_table_all"), document.getElementById("text_table_a
 	[document.getElementById("background_table_all"), document.getElementById("background_table_all"), document.getElementById("background_table_all"), document.getElementById("background_table_all"), document.getElementById("background_table_all")],
 ]
 
-
-}
-	
-
-function onLoad()
-{
-	c = document.getElementById("logo_image").getContext("2d");
-	c.clearRect(0, 0, imglogo.width, imglogo.height);
-	c.drawImage(imglogo, 0, 0, imglogo.width, imglogo.height);
-
-	c = document.getElementById("stamp_creation").getContext("2d");
-	c.clearRect(0, 0, imgstamp_production.width, imgstamp_production.height);
-	c.drawImage(imgstamp_production, 0, 0, imgstamp_production.width, imgstamp_production.height);
-
-	c = document.getElementById("stamp_tab1").getContext("2d");
-	c.clearRect(0, 0, imgtab_main.width, imgtab_main.height);
-	c.drawImage(imgtab_main, 0, 0, imgtab_main.width, imgtab_main.height);
-
-	c = document.getElementById("stamp_tab2").getContext("2d");
-	c.clearRect(0, 0, imgtab_text.width, imgtab_text.height);
-	c.drawImage(imgtab_text, 0, 0, imgtab_text.width, imgtab_text.height);
-
-	c = document.getElementById("stamp_tab3").getContext("2d");
-	c.clearRect(0, 0, imgtab_background.width, imgtab_background.height);
-	c.drawImage(imgtab_background, 0, 0, imgtab_background.width, imgtab_background.height);
-
-	c = document.getElementById("stamp_part_main_left").getContext("2d");
-	c.clearRect(0, 0, imgmain_left.width, imgmain_left.height);
-	c.drawImage(imgmain_left, 0, 0, imgmain_left.width, imgmain_left.height);
-
-	c = document.getElementById("stamp_part_main_right").getContext("2d");
-	c.clearRect(0, 0, imgmain_right.width, imgmain_right.height);
-	c.drawImage(imgmain_right, 0, 0, imgmain_right.width, imgmain_right.height);
-
-	c = document.getElementById("stamp_part_text_left").getContext("2d");
-	c.clearRect(0, 0, imgtext_left.width, imgtext_left.height);
-	c.drawImage(imgtext_left, 0, 0, imgtext_left.width, imgtext_left.height);
-
-	c = document.getElementById("stamp_part_text_right").getContext("2d");
-	c.clearRect(0, 0, imgtext_right.width, imgtext_right.height);
-	c.drawImage(imgtext_right, 0, 0, imgtext_right.width, imgtext_right.height);
-
-	c = document.getElementById("stamp_part_background_left").getContext("2d");
-	c.clearRect(0, 0, imgbackground_left.width, imgbackground_left.height);
-	c.drawImage(imgbackground_left, 0, 0, imgbackground_left.width, imgbackground_left.height);
-
-	c = document.getElementById("stamp_part_background_right").getContext("2d");
-	c.clearRect(0, 0, imgbackground_right.width, imgbackground_right.height);
-	c.drawImage(imgbackground_right, 0, 0, imgbackground_right.width, imgbackground_right.height);
-
 	c = null;
 
+
 	Table_Draw();
+
+imgsystem_table.src = "system_table.png? raw=true";
+imgsystem_table.width = 1000;
+imgsystem_table.height = 1000;
 
 imgmain_table.src = "main_table.png? raw=true";
 imgmain_table.width = 1000;
@@ -158,6 +101,75 @@ imgtext_table.height = 1000;
 imgbackground_table.src = "background_table.png? raw=true";
 imgbackground_table.width = 1000;
 imgbackground_table.height = 1000;
+
+
+}
+	
+
+function onLoad()
+{
+}
+
+function arrange_system()
+{
+	c = document.getElementById("system_table_all").getContext("2d");
+	c.clearRect(0, 0, 1000, 1000);
+	c.drawImage(imgsystem_table, 0, 0, 10000, 10000);
+
+	c = document.getElementById("stamp_creation").getContext("2d");
+	c.clearRect(0, 0, 1000, 1000);
+	c.drawImage(document.getElementById("system_table_all"), 0, -1400, 10000, 10000);
+
+	c = document.getElementById("stamp_tab1").getContext("2d");
+	c.clearRect(0, 0, 1000, 1000);
+	c.drawImage(document.getElementById("system_table_all"), -7000, -200, 10000, 10000);
+
+	c = document.getElementById("stamp_tab2").getContext("2d");
+	c.clearRect(0, 0, 1000, 1000);
+	c.drawImage(document.getElementById("system_table_all"), -8000, -200, 10000, 10000);
+
+	c = document.getElementById("stamp_tab3").getContext("2d");
+	c.clearRect(0, 0, 1000, 1000);
+	c.drawImage(document.getElementById("system_table_all"), -9000, -200, 10000, 10000);
+
+	c = document.getElementById("stamp_part_main_left").getContext("2d");
+	c.clearRect(0, 0, 1000, 1000);
+	c.drawImage(document.getElementById("system_table_all"), -1000, 0, 10000, 10000);
+
+	c = document.getElementById("stamp_part_main_right").getContext("2d");
+	c.clearRect(0, 0, 1000, 1000);
+	c.drawImage(document.getElementById("system_table_all"), -2000, 0, 10000, 10000);
+
+	c = document.getElementById("stamp_part_text_left").getContext("2d");
+	c.clearRect(0, 0, 1000, 1000);
+	c.drawImage(document.getElementById("system_table_all"), -3000, 0, 10000, 10000);
+
+	c = document.getElementById("stamp_part_text_right").getContext("2d");
+	c.clearRect(0, 0, 1000, 1000);
+	c.drawImage(document.getElementById("system_table_all"), -4000, 0, 10000, 10000);
+
+	c = document.getElementById("stamp_part_background_left").getContext("2d");
+	c.clearRect(0, 0, 1000, 1000);
+	c.drawImage(document.getElementById("system_table_all"), -5000, 0, 10000, 10000);
+
+	c = document.getElementById("stamp_part_background_right").getContext("2d");
+	c.clearRect(0, 0, 1000, 1000);
+	c.drawImage(document.getElementById("system_table_all"), -6000, 0, 10000, 10000);
+
+	c = null;
+
+	Table_Draw();
+
+	table_prepare = table_prepare + 1;
+
+	if (table_prepare == 4)
+	{
+		c = document.getElementById("stamp_canvas").getContext("2d");
+		c.clearRect(0, 0, imgbrank.width, imgbrank.height);
+		c.drawImage(imgbrank, 0, 0, imgbrank.width, imgbrank.height);
+
+		c = null;
+	}
 }
 
 function arrange_main()
@@ -168,13 +180,17 @@ function arrange_main()
 
 	Table_Draw();
 
+	c = null;
+
 	table_prepare = table_prepare + 1;
 
-	if (table_prepare == 3)
+	if (table_prepare == 4)
 	{
 		c = document.getElementById("stamp_canvas").getContext("2d");
 		c.clearRect(0, 0, imgbrank.width, imgbrank.height);
 		c.drawImage(imgbrank, 0, 0, imgbrank.width, imgbrank.height);
+
+		c = null;
 	}
 }
 
@@ -184,15 +200,19 @@ function arrange_text()
 	c.clearRect(0, 0, imgtext_table.width, imgtext_table.height);
 	c.drawImage(imgtext_table, 0, 0, document.getElementById("text_table_all").width, document.getElementById("text_table_all").height);
 
+	c = null;
+
 	Table_Draw();
 
 	table_prepare = table_prepare + 1;
 
-	if (table_prepare == 3)
+	if (table_prepare == 4)
 	{
 		c = document.getElementById("stamp_canvas").getContext("2d");
 		c.clearRect(0, 0, imgbrank.width, imgbrank.height);
 		c.drawImage(imgbrank, 0, 0, imgbrank.width, imgbrank.height);
+
+		c = null;
 	}
 }
 
@@ -202,15 +222,19 @@ function arrange_background()
 	c.clearRect(0, 0, imgbackground_table.width, imgbackground_table.height);
 	c.drawImage(imgbackground_table, 0, 0, document.getElementById("background_table_all").width, document.getElementById("background_table_all").height);
 
+	c = null;
+
 	Table_Draw();
 
 	table_prepare = table_prepare + 1;
 
-	if (table_prepare == 3)
+	if (table_prepare == 4)
 	{
 		c = document.getElementById("stamp_canvas").getContext("2d");
 		c.clearRect(0, 0, imgbrank.width, imgbrank.height);
 		c.drawImage(imgbrank, 0, 0, imgbrank.width, imgbrank.height);
+
+		c = null;
 	}
 }
 

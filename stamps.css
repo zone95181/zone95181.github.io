@@ -81,23 +81,41 @@ header {
 
 #stamp_tab1 {
 	width: 100%;
-	margin-left: -11px;
 	aspect-ratio: 5 / 3;
 	border: 4px solid rgba(255, 0, 0, 50%);
 }
 
+#tab1 {
+	width: 30%;
+	margin-left: 4px;
+	margin-right: 4px;
+	border: 4px solid rgba(255, 255, 255, 50%);
+}
+
 #stamp_tab2 {
 	width: 100%;
-	margin-left: -3px;
-	aspect-ratio: 500 / 298;
+	aspect-ratio: 5 / 3;
 	border: 4px solid rgba(0, 255, 0, 50%);
+}
+
+#tab2 {
+	width: 30%;
+	margin-left: 4px;
+	margin-right: 4px;
+	border: 4px solid rgba(255, 255, 255, 50%);
 }
 
 #stamp_tab3 {
 	width: 100%;
-	margin-left: 5px;
-	aspect-ratio: 500 / 296;
+	aspect-ratio: 5 / 3;
 	border: 4px solid rgba(0, 0, 255, 50%);
+}
+
+#tab3 {
+	width: 30%;
+	margin-left: 4px;
+	margin-right: 4px;
+	border: 4px solid rgba(255, 255, 255, 50%);
 }
 
 #stamp_part_main {

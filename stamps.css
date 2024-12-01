@@ -1,5 +1,5 @@
 /*stamps*/
-/*20241128*/
+/*20241201*/
 body {
 	background-color: #FFFFFF;
 	user-select: none;
@@ -15,197 +15,395 @@ body {
 header {
 }
 
+#main_table_all {
+	width: 0px;
+	height: 0px;
+}
+
+#text_table_all {
+	width: 0px;
+	height: 0px;
+}
+
+#background_table_all {
+	width: 0px;
+	height: 0px;
+}
+
+#image_test2 {
+	width: 500px;
+	height: 500px;
+	border: 10px double rgba(0, 0, 0, 50%);
+
+}
+
 #stamp_canvas_adjust {
 	display: column;
-	width: 300px;
-	height: 80px;
+	width: 70%;
+	margin-right: auto;
+	margin-left: auto;
 }
 
 #stamp_canvas_frame {
-	width: 300px;
-	height: 300px;
+	width: 70%;
+	margin-right: auto;
+	margin-left: auto;
 	border: 10px double rgba(0, 0, 0, 50%);
 }
 
 #stamp_canvas_tab {
 	display: flex;
-	width: 300px;
-	height: 60px;
+	width: 70%;
+	margin-right: auto;
+	margin-left: auto;
 }
 
-.stamp_canvas_creation {
-	width: 300px;
-	height: 60px;
+#stamp_canvas_creation {
+	width: 70%;
+	margin-right: auto;
+	margin-left: auto;
 	border: 10px double rgba(0, 0, 0, 50%);
-}
-
-.stamp_part_main {
-	display: flex;
-	width: 500px;
-	height: 100px;
-}
-
-#stamp_tab1 {
-	width: 100%;
-	aspect-ratio: 5 / 3;
-	border: 4px solid rgba(255, 0, 0, 50%);
 }
 
 #stamp_adjust1 {
 	width: 100%;
-	margin-left: 5px;
+	margin-left: -4px;
 	aspect-ratio: 10 / 1;
 	border: 4px solid rgba(255, 0, 255, 50%);
 }
 
 #stamp_adjust2 {
 	width: 100%;
-	margin-left: 5px;
+	margin-left: -4px;
 	aspect-ratio: 10 / 1;
 	border: 4px solid rgba(0, 255, 255, 50%);
 }
 
+#stamp_tab1 {
+	width: 100%;
+	margin-left: -11px;
+	aspect-ratio: 5 / 3;
+	border: 4px solid rgba(255, 0, 0, 50%);
+}
+
 #stamp_tab2 {
 	width: 100%;
-	margin-left: 8px;
-	aspect-ratio: 5 / 3;
+	margin-left: -3px;
+	aspect-ratio: 500 / 298;
 	border: 4px solid rgba(0, 255, 0, 50%);
 }
 
 #stamp_tab3 {
 	width: 100%;
-	margin-left: 16px;
-	aspect-ratio: 5 / 3;
+	margin-left: 5px;
+	aspect-ratio: 500 / 296;
 	border: 4px solid rgba(0, 0, 255, 50%);
 }
 
-.stamp_part_text {
+#stamp_part_main {
 	display: flex;
-	width: 500px;
-	height: 100px;
+	width: 100%;
+	aspect-ratio: 8 / 1;
+	margin-top: auto;
+	margin-bottom: auto;
 }
 
-.stamp_part_background {
+#stamp_part_text {
 	display: flex;
-	width: 500px;
-	height: 100px;
+	width: 100%;
+	aspect-ratio: 8 / 1;
+	margin-top: auto;
+	margin-bottom: auto;
+}
+
+#stamp_part_background {
+	display: flex;
+	width: 100%;
+	aspect-ratio: 8 / 1;
+	margin-top: auto;
+	margin-bottom: auto;
+}
+
+#stamp_part_main_left_div {
+	width: 12.5%;
+	margin-right: auto;
+	margin-left: auto;
+	apsect-ratio: 1 / 1;
+}	
+
+#stamp_part_main_left {
+	height: 100%;
+
+	apsect-ratio: 1 / 1;
+}	
+
+#stamp_part_main_div1 {
+	width: 12.5%;
+
+	margin-right: auto;
+	margin-left: auto;
 }
 
 #stamp_part_main1 {
 	width: 100%;
-	transform-origin: 100%;
+	border: 4px solid rgba(255, 0, 0, 50%);
 
-	border: 5px solid rgba(255, 0, 0, 50%);
+}
+
+#stamp_part_main_div2 {
+	width: 12.5%;
+
+	margin-right: auto;
+	margin-left: auto;
 }
 
 #stamp_part_main2 {
 	width: 100%;
-	margin-left: 10px;
-	aspect-ratio: 100 / 99;
-	border: 5px solid rgba(255, 0, 0, 50%);
+	border: 4px solid rgba(255, 0, 0, 50%);
+
+}
+
+#stamp_part_main_div3 {
+	width: 12.5%;
+
+	margin-right: auto;
+	margin-left: auto;
 }
 
 #stamp_part_main3 {
 	width: 100%;
-	margin-left: 20px;
-	aspect-ratio: 100 / 98;
-	border: 5px solid rgba(255, 0, 0, 50%);
+	border: 4px solid rgba(255, 0, 0, 50%);
+
+}
+
+#stamp_part_main_div4 {
+	width: 12.5%;
+
+	margin-right: auto;
+	margin-left: auto;
 }
 
 #stamp_part_main4 {
 	width: 100%;
-	margin-left: 30px;
-	aspect-ratio: 100 / 97;
-	border: 5px solid rgba(255, 0, 0, 50%);
+	border: 4px solid rgba(255, 0, 0, 50%);
+
+}
+
+#stamp_part_main_div5 {
+	width: 12.5%;
+
+	margin-right: auto;
+	margin-left: auto;
 }
 
 #stamp_part_main5 {
 	width: 100%;
-	margin-left: 40px;
-	aspect-ratio: 100 / 96;
-	border: 5px solid rgba(255, 0, 0, 50%);
+	border: 4px solid rgba(255, 0, 0, 50%);
+
+}
+
+#stamp_part_main_right_div {
+	width: 12.5%;
+
+	margin-right: auto;
+	margin-left: auto;
+	apsect-ratio: 1 / 1;
+}
+
+#stamp_part_main_right {
+	height: 100%;
+
+	apsect-ratio: 1 / 1;
+}
+
+#stamp_part_text_left_div {
+	width: 12.5%;
+
+	margin-right: auto;
+	margin-left: auto;
+	apsect-ratio: 1 / 1;
+}
+
+#stamp_part_text_left {
+	height: 100%;
+
+	apsect-ratio: 1 / 1;
+}
+
+#stamp_part_text_div1 {
+	width: 12.5%;
+
+	margin-right: auto;
+	margin-left: auto;
 }
 
 #stamp_part_text1 {
 	width: 100%;
-	margin-top: 8px;
-	border: 5px solid rgba(0, 255, 0, 50%);
+	border: 4px solid rgba( 0, 255, 0, 50%);
+
+}
+
+#stamp_part_text_div2 {
+	width: 12.5%;
+
+	margin-right: auto;
+	margin-left: auto;
 }
 
 #stamp_part_text2 {
 	width: 100%;
-	margin-top: 8px;
-	margin-left: 10px;
-	aspect-ratio: 100 / 99;
-	border: 5px solid rgba(0, 255, 0, 50%);
+	border: 4px solid rgba( 0, 255, 0, 50%);
+
+}
+
+#stamp_part_text_div3 {
+	width: 12.5%;
+
+	margin-right: auto;
+	margin-left: auto;
 }
 
 #stamp_part_text3 {
 	width: 100%;
-	margin-top: 8px;
-	margin-left: 20px;
-	aspect-ratio: 100 / 98;
-	border: 5px solid rgba(0, 255, 0, 50%);
+	border: 4px solid rgba( 0, 255, 0, 50%);
+
+}
+
+#stamp_part_text_div4 {
+	width: 12.5%;
+
+	margin-right: auto;
+	margin-left: auto;
 }
 
 #stamp_part_text4 {
 	width: 100%;
-	margin-top: 8px;
-	margin-left: 30px;
-	aspect-ratio: 100 / 97;
-	border: 5px solid rgba(0, 255, 0, 50%);
+	border: 4px solid rgba( 0, 255, 0, 50%);
+
+}
+
+#stamp_part_text_div5 {
+	width: 12.5%;
+
+	margin-right: auto;
+	margin-left: auto;
 }
 
 #stamp_part_text5 {
 	width: 100%;
-	margin-top: 8px;
-	margin-left: 40px;
-	aspect-ratio: 100 / 96;
-	border: 5px solid rgba(0, 255, 0, 50%);
+	border: 4px solid rgba( 0, 255, 0, 50%);
+
+}
+
+#stamp_part_text_right_div {
+	width: 12.5%;
+
+	margin-right: auto;
+	margin-left: auto;
+	apsect-ratio: 1 / 1;
+}
+
+#stamp_part_text_right {
+	height: 100%;
+
+	apsect-ratio: 1 / 1;
+}
+
+#stamp_part_background_left_div {
+	width: 12.5%;
+
+	margin-right: auto;
+	margin-left: auto;
+	apsect-ratio: 1 / 1;
+}
+
+#stamp_part_background_left {
+	height: 100%;
+
+	apsect-ratio: 1 / 1;
+}
+
+#stamp_part_background_div1 {
+	width: 12.5%;
+
+	margin-right: auto;
+	margin-left: auto;
 }
 
 #stamp_part_background1 {
 	width: 100%;
-	margin-top: 16px;
-	border: 5px solid rgba(0, 0, 255, 50%);
+	border: 4px solid rgba( 0, 0, 255, 50%);
+
+}
+
+#stamp_part_background_div2 {
+	width: 12.5%;
+
+	margin-right: auto;
+	margin-left: auto;
 }
 
 #stamp_part_background2 {
 	width: 100%;
-	margin-top: 16px;
-	margin-left: 10px;
-	aspect-ratio: 100 / 99;
-	border: 5px solid rgba(0, 0, 255, 50%);
+	border: 4px solid rgba( 0, 0, 255, 50%);
+
+}
+
+#stamp_part_background_div3 {
+	width: 12.5%;
+
+	margin-right: auto;
+	margin-left: auto;
 }
 
 #stamp_part_background3 {
 	width: 100%;
-	margin-top: 16px;
-	margin-left: 20px;
-	aspect-ratio: 100 / 98;
-	border: 5px solid rgba(0, 0, 255, 50%);
+	border: 4px solid rgba( 0, 0, 255, 50%);
+
+}
+
+#stamp_part_background_div4 {
+	width: 12.5%;
+
+	margin-right: auto;
+	margin-left: auto;
 }
 
 #stamp_part_background4 {
 	width: 100%;
-	margin-top: 16px;
-	margin-left: 30px;
-	aspect-ratio: 100 / 97;
-	border: 5px solid rgba(0, 0, 255, 50%);
+	border: 4px solid rgba( 0, 0, 255, 50%);
+
+}
+
+#stamp_part_background_div5 {
+	width: 12.5%;
+
+	margin-right: auto;
+	margin-left: auto;
 }
 
 #stamp_part_background5 {
 	width: 100%;
-	margin-top: 16px;
-	margin-left: 40px;
-	aspect-ratio: 100 / 96;
-	border: 5px solid rgba(0, 0, 255, 50%);
+	border: 4px solid rgba( 0, 0, 255, 50%);
+
+}
+
+#stamp_part_background_right_div {
+	width: 12.5%;
+
+	margin-right: auto;
+	margin-left: auto;
+	apsect-ratio: 1 / 1;
+}
+
+#stamp_part_background_right {
+	height: 100%;
+
+	apsect-ratio: 1 / 1;
 }
 
 #stamp_canvas {
-transform-origin: 50 50; 
-	width: 300px;
-	height: 300px;
+	width: 100%;
 }
 
 #stamp_creation {

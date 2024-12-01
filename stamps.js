@@ -26,12 +26,9 @@ var canvas_element = [
 ]
 
 var table_element = [
-	[document.getElementById("main_table_all"), document.getElementById("main_table_all"), document.getElementById("main_table_all"), document.getElementById("main_table_all"), document.getElementById("main_table_all")],
-
-	[document.getElementById("text_table_all"), 
-document.getElementById("text_table_all"), document.getElementById("text_table_all"), document.getElementById("text_table_all"), document.getElementById("text_table_all")],
-
-	[document.getElementById("background_table_all"), document.getElementById("background_table_all"), document.getElementById("background_table_all"), document.getElementById("background_table_all"), document.getElementById("background_table_all")],
+	[0, 0, 0, 0, 0],
+	[0, 0, 0, 0, 0],
+	[0, 0, 0, 0, 0],
 ]
 
 var table_number = [
@@ -67,6 +64,10 @@ imgtext_right.src = "text_right.png? raw=true";
 imgbackground_left.src = "background_left.png? raw=true";
 imgbackground_right.src = "background_right.png? raw=true";
 
+imgnowloading.onload = () => {
+	test();
+}
+
 imgmain_table.onload = () => {
 	arrange_main();
 }
@@ -77,6 +78,25 @@ imgbackground_table.onload = () => {
 	arrange_background();
 }
 
+function test()
+{
+	c = document.getElementById("stamp_canvas").getContext("2d");
+	c.clearRect(0, 0, imgnowloading.width, imgnowloading.height);
+	c.drawImage(imgnowloading, 0, 0, imgnowloading.width, imgnowloading.height);
+
+table_element = [
+	[document.getElementById("main_table_all"), document.getElementById("main_table_all"), document.getElementById("main_table_all"), document.getElementById("main_table_all"), document.getElementById("main_table_all")],
+
+	[document.getElementById("text_table_all"), 
+document.getElementById("text_table_all"), document.getElementById("text_table_all"), document.getElementById("text_table_all"), document.getElementById("text_table_all")],
+
+	[document.getElementById("background_table_all"), document.getElementById("background_table_all"), document.getElementById("background_table_all"), document.getElementById("background_table_all"), document.getElementById("background_table_all")],
+]
+
+
+}
+	
+
 function onLoad()
 {
 	c = document.getElementById("logo_image").getContext("2d");
@@ -86,10 +106,6 @@ function onLoad()
 	c = document.getElementById("stamp_creation").getContext("2d");
 	c.clearRect(0, 0, imgstamp_production.width, imgstamp_production.height);
 	c.drawImage(imgstamp_production, 0, 0, imgstamp_production.width, imgstamp_production.height);
-
-	c = document.getElementById("stamp_canvas").getContext("2d");
-	c.clearRect(0, 0, imgnowloading.width, imgnowloading.height);
-	c.drawImage(imgnowloading, 0, 0, imgnowloading.width, imgnowloading.height);
 
 	c = document.getElementById("stamp_tab1").getContext("2d");
 	c.clearRect(0, 0, imgtab_main.width, imgtab_main.height);

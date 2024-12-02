@@ -1,5 +1,5 @@
 /*stamps*/
-/*20241201*/
+/*20241202*/
 var canvas = document.createElement("canvas");
 var c = canvas.getContext("2d");
 var imglogo = new Image();
@@ -11,9 +11,9 @@ var imgbackground_table = new Image();
 var imgsystem_table = new Image();
 
 var canvas_element = [
-	[imgbrank,0,0,0,0,0,0,1],
-	[imgbrank,0,0,0,0,0,0,1],
-	[imgbrank,0,0,0,0,0,0,1],
+	[imgbrank,0,0,0,0,0,0,1,0,0],
+	[imgbrank,0,0,0,0,0,0,1,0,0],
+	[imgbrank,0,0,0,0,0,0,1,0,0],
 ]
 
 var table_element = [
@@ -156,6 +156,14 @@ function arrange_system()
 	c.clearRect(0, 0, 1000, 1000);
 	c.drawImage(document.getElementById("system_table_all"), -6000, 0, 10000, 10000);
 
+	c = document.getElementById("stamp_adjust1").getContext("2d");
+	c.clearRect(0, 0, 1000, 1000);
+	c.drawImage(document.getElementById("system_table_all"), -1000, -1475, 10000, 10000);
+
+	c = document.getElementById("stamp_adjust2").getContext("2d");
+	c.clearRect(0, 0, 1000, 1000);
+	c.drawImage(document.getElementById("system_table_all"), -2000, -1475, 10000, 10000);
+
 	c = null;
 
 	Table_Draw();
@@ -270,8 +278,7 @@ function Canvas_Main()
 	}
 	canvas_element[1][3] = 0;
 	canvas_element[1][4] = 0;
-	canvas_element[1][5] = 0;
-	canvas_element[1][6] = 0;
+
 	Canvas_Draw();
 }
 
@@ -307,8 +314,7 @@ function Canvas_Text()
 	}
 	canvas_element[2][3] = 0;
 	canvas_element[2][4] = 0;
-	canvas_element[2][5] = 0;
-	canvas_element[2][6] = 0;
+
 	Canvas_Draw();
 }
 
@@ -345,8 +351,7 @@ function Canvas_Background()
 	}
 	canvas_element[0][3] = 0;
 	canvas_element[0][4] = 0;
-	canvas_element[0][5] = 0;
-	canvas_element[0][6] = 0;
+
 	Canvas_Draw();
 }
 
@@ -393,6 +398,18 @@ function Canvas_Select()
 				canvas_select = 1;
 				document.getElementById("stamp_canvas_frame").style.border = "10px double rgba(255, 0, 0, 50%)";
 			}
+			c = document.getElementById("stamp_adjust1").getContext("2d");
+			c.clearRect(0, 0, 1000, 1000);
+			c.drawImage(document.getElementById("system_table_all"), -1000, -1475, 10000, 10000);
+			c.drawImage(document.getElementById("system_table_all"), -4000 + canvas_element[1][8], -1475, 10000, 10000);
+			c = document.getElementById("stamp_adjust2").getContext("2d");
+			c.clearRect(0, 0, 1000, 1000);
+			c.drawImage(document.getElementById("system_table_all"), -2000, -1475, 10000, 10000);
+			c.drawImage(document.getElementById("system_table_all"), -6000 + canvas_element[1][9], -1475, 10000, 10000);
+
+
+			c = null;
+
 			break;
 
 		case "stamp_tab2":
@@ -406,6 +423,18 @@ function Canvas_Select()
 				canvas_select = 2;
 				document.getElementById("stamp_canvas_frame").style.border = "10px double rgba(0, 255, 0, 50%)";
 			}
+			c = document.getElementById("stamp_adjust1").getContext("2d");
+			c.clearRect(0, 0, 1000, 1000);
+			c.drawImage(document.getElementById("system_table_all"), -1000, -1475, 10000, 10000);
+			c.drawImage(document.getElementById("system_table_all"), -4000 + canvas_element[2][8], -1475, 10000, 10000);
+			c = document.getElementById("stamp_adjust2").getContext("2d");
+			c.clearRect(0, 0, 1000, 1000);
+			c.drawImage(document.getElementById("system_table_all"), -2000, -1475, 10000, 10000);
+			c.drawImage(document.getElementById("system_table_all"), -6000 + canvas_element[2][9], -1475, 10000, 10000);
+
+
+			c = null;
+
 			break;
 		case "stamp_tab3":
 			if (canvas_select == 3)
@@ -418,6 +447,18 @@ function Canvas_Select()
 				canvas_select = 3;
 				document.getElementById("stamp_canvas_frame").style.border = "10px double rgba(0, 0, 255, 50%)";
 			}
+			c = document.getElementById("stamp_adjust1").getContext("2d");
+			c.clearRect(0, 0, 1000, 1000);
+			c.drawImage(document.getElementById("system_table_all"), -1000, -1475, 10000, 10000);
+			c.drawImage(document.getElementById("system_table_all"), -4000 + canvas_element[0][8], -1475, 10000, 10000);
+			c = document.getElementById("stamp_adjust2").getContext("2d");
+			c.clearRect(0, 0, 1000, 1000);
+			c.drawImage(document.getElementById("system_table_all"), -2000, -1475, 10000, 10000);
+			c.drawImage(document.getElementById("system_table_all"), -6000 + canvas_element[0][9], -1475, 10000, 10000);
+
+
+			c = null;
+
 			break;
 	}
 }
@@ -496,14 +537,38 @@ function Canvas_Adjust_Rotate()
 		case 1:
 			canvas_element[1][6] = canvas_element[1][5];	
 			canvas_element[1][5] = (2 * 360 * (event.pageX - document.getElementById("stamp_adjust1").getBoundingClientRect().left) / (document.getElementById("stamp_adjust1").getBoundingClientRect().right - document.getElementById("stamp_adjust1").getBoundingClientRect().left) - (2 * 180));
+			canvas_element[1][8] = (event.clientX - document.getElementById("stamp_adjust1").getBoundingClientRect().left - (document.getElementById("stamp_adjust1").getBoundingClientRect().width / 2)) * document.getElementById("stamp_adjust1").width / document.getElementById("stamp_adjust1").getBoundingClientRect().width;
+			c = document.getElementById("stamp_adjust1").getContext("2d");
+			c.clearRect(0, 0, 1000, 1000);
+			c.drawImage(document.getElementById("system_table_all"), -1000, -1475, 10000, 10000);
+			c.drawImage(document.getElementById("system_table_all"), -4000 + canvas_element[1][8], -1475, 10000, 10000);
+
+			c = null;
+
 			break;
 		case 2:
 			canvas_element[2][6] = canvas_element[2][5];	
 			canvas_element[2][5] = (2 * 360 * (event.pageX - document.getElementById("stamp_adjust1").getBoundingClientRect().left) / (document.getElementById("stamp_adjust1").getBoundingClientRect().right - document.getElementById("stamp_adjust1").getBoundingClientRect().left) - (2 * 180));
+			canvas_element[2][8] = (event.clientX - document.getElementById("stamp_adjust1").getBoundingClientRect().left - (document.getElementById("stamp_adjust1").getBoundingClientRect().width / 2)) * document.getElementById("stamp_adjust1").width / document.getElementById("stamp_adjust1").getBoundingClientRect().width;
+			c = document.getElementById("stamp_adjust1").getContext("2d");
+			c.clearRect(0, 0, 1000, 1000);
+			c.drawImage(document.getElementById("system_table_all"), -1000, -1475, 10000, 10000);
+			c.drawImage(document.getElementById("system_table_all"), -4000 + canvas_element[2][8], -1475, 10000, 10000);
+
+			c = null;
+
 			break;
 		case 3:
 			canvas_element[0][6] = canvas_element[0][5];	
 			canvas_element[0][5] = (2 * 360 * (event.pageX - document.getElementById("stamp_adjust1").getBoundingClientRect().left) / (document.getElementById("stamp_adjust1").getBoundingClientRect().right - document.getElementById("stamp_adjust1").getBoundingClientRect().left) - (2 * 180));
+			canvas_element[0][8] = (event.clientX - document.getElementById("stamp_adjust1").getBoundingClientRect().left - (document.getElementById("stamp_adjust1").getBoundingClientRect().width / 2)) * document.getElementById("stamp_adjust1").width / document.getElementById("stamp_adjust1").getBoundingClientRect().width;
+			c = document.getElementById("stamp_adjust1").getContext("2d");
+			c.clearRect(0, 0, 1000, 1000);
+			c.drawImage(document.getElementById("system_table_all"), -1000, -1475, 10000, 10000);
+			c.drawImage(document.getElementById("system_table_all"), -4000 + canvas_element[0][8], -1475, 10000, 10000);
+
+			c = null;
+
 			break;
 	}
 	Canvas_Draw();
@@ -528,18 +593,39 @@ function Canvas_Adjust_Scale()
 	{
 		case 1:
 			canvas_element[1][7] = (event.clientX - document.getElementById("stamp_adjust2").getBoundingClientRect().left) * 2 / document.getElementById("stamp_adjust2").getBoundingClientRect().width;
+			canvas_element[1][9] = (event.clientX - document.getElementById("stamp_adjust1").getBoundingClientRect().left - (document.getElementById("stamp_adjust1").getBoundingClientRect().width / 2)) * document.getElementById("stamp_adjust1").width / document.getElementById("stamp_adjust1").getBoundingClientRect().width;
+			c = document.getElementById("stamp_adjust2").getContext("2d");
+			c.clearRect(0, 0, 1000, 1000);
+			c.drawImage(document.getElementById("system_table_all"), -2000, -1475, 10000, 10000);
+			c.drawImage(document.getElementById("system_table_all"), -6000 + canvas_element[1][9], -1475, 10000, 10000);
+
+			c = null;
+
 			break;
 		case 2:
 			canvas_element[2][7] = (event.clientX - document.getElementById("stamp_adjust2").getBoundingClientRect().left) * 2 / document.getElementById("stamp_adjust2").getBoundingClientRect().width;
+			canvas_element[2][9] = (event.clientX - document.getElementById("stamp_adjust1").getBoundingClientRect().left - (document.getElementById("stamp_adjust1").getBoundingClientRect().width / 2)) * document.getElementById("stamp_adjust1").width / document.getElementById("stamp_adjust1").getBoundingClientRect().width;
+			c = document.getElementById("stamp_adjust2").getContext("2d");
+			c.clearRect(0, 0, 1000, 1000);
+			c.drawImage(document.getElementById("system_table_all"), -2000, -1475, 10000, 10000);
+			c.drawImage(document.getElementById("system_table_all"), -6000 + canvas_element[2][9], -1475, 10000, 10000);
+
+			c = null;
+
 			break;
 		case 3:
 			canvas_element[0][7] = (event.clientX - document.getElementById("stamp_adjust2").getBoundingClientRect().left) * 2 / document.getElementById("stamp_adjust2").getBoundingClientRect().width;
+			canvas_element[0][9] = (event.clientX - document.getElementById("stamp_adjust1").getBoundingClientRect().left - (document.getElementById("stamp_adjust1").getBoundingClientRect().width / 2)) * document.getElementById("stamp_adjust1").width / document.getElementById("stamp_adjust1").getBoundingClientRect().width;
+			c = document.getElementById("stamp_adjust2").getContext("2d");
+			c.clearRect(0, 0, 1000, 1000);
+			c.drawImage(document.getElementById("system_table_all"), -2000, -1475, 10000, 10000);
+			c.drawImage(document.getElementById("system_table_all"), -6000 + canvas_element[0][9], -1475, 10000, 10000);
+
+			c = null;
+
 			break;
 	}
 	Canvas_Draw();
-
-
-
 }
 
 function Table_Draw()
